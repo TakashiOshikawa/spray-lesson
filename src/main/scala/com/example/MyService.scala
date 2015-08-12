@@ -16,12 +16,15 @@ class MyServiceActor extends Actor with MyService {
   // this actor only runs our route, but you could add
   // other things here, like request stream processing
   // or timeout handling
-  def receive = runRoute(myRoute)
+  def receive = runRoute(myRoute2)
 }
 
 
 // this trait defines our service behavior independently from the service actor
-trait MyService extends HttpService {
+trait MyService extends HttpService with Common {
+
+  val jsonVal = "{\"test\":\"testval\",\"test2\":\"testval\"}"
+  val jsonVal2 = "{\"lang1\":\"Scala\", \"lang2\":\"Haskell\", \"lang3\":\"Swift\"}"
 
   val myRoute =
     path("") {
@@ -37,4 +40,39 @@ trait MyService extends HttpService {
         }
       }
     }
+
+  val myRoute2 =
+    parameters('color, 'backgroundColor) { (color, backgroundColor) =>
+
+    path("hell" / IntNumber / IntNumber) {
+      (num, num2) =>
+
+        get {
+          respondWithMediaType(`application/json`) {
+            // XML is marshalled to `text/xml` by default, so we simply override here
+            complete {
+              "{\"val1\":\"" + addDiv(num) + "\", \"color\":\"" + color + "\" }"
+              //            jsonVal
+            }
+          }
+        } ~
+        post {
+          respondWithMediaType(`application/json`) {
+            complete {
+              jsonVal2
+            }
+          }
+        }
+      }
+    }
+
+
+}
+
+trait Common {
+  lazy val square: Int => Int = n => n*n
+  lazy val div2: Int => Int = n => n/2
+  lazy val add: (Int, Int) => Int = (n1, n2) => n1+n2
+  def addDiv = div2 compose square
+//  def addSquare(n1: Int) = square add(n1)
 }
