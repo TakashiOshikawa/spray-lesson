@@ -12,8 +12,10 @@ trait Common {
 
   //JSON形式で関数を返す
   //Mapを１つ取得してkeyとvalueをjson形式にしてStringで返す
-  def listConvertToJson[A,B](mp: Map[A,B]): String =
-    mp.foldLeft("")((k,v) => k + jsonFormat(v._1, v._2) )
+  def listConvertToJson[A,B](mp: Map[A,B]): String = {
+    val js = "{" + mp.foldLeft("")((k, v) => k + jsonFormat(v._1, v._2)) + "}"
+    js.replaceAll( ",}", "}" )
+  }
 
   //入力された2つの値をJSON形式にして返す
   lazy val jsonFormat: (Any, Any) => String = (val1, val2) =>
