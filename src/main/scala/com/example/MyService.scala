@@ -4,6 +4,7 @@ import akka.actor.Actor
 import spray.routing._
 import spray.http._
 import MediaTypes._
+import com.utility.Common
 
 // we don't implement our route structure directly in the service actor because
 // we want to be able to test it independently, without having to spin up an actor
@@ -74,7 +75,8 @@ trait MyService extends HttpService with Common {
           respondWithMediaType(`application/json`){
             complete{
               calType match {
-                case "add" => "{\"add\":\"" + add(num1, num2) + "\"}"
+                case "add"  => "{\"add\":\"" + add(num1, num2) + "\"}"
+                case "json" => listConvertToJson(Map("aaa"->111, "bbb"->222))
               }
             }
           }
@@ -82,19 +84,5 @@ trait MyService extends HttpService with Common {
       }
     }
 
-
-}
-
-trait Common {
-  lazy val square: Int => Int = n => n*n
-  lazy val div2: Int => Int = n => n/2
-  lazy val add: (Int, Int) => Int = (n1, n2) => n1+n2
-  def addDiv = div2 compose square
-
-  //JSON形式で関数を返す
-  def listConvertToJson[A](ls: Seq[A]): String = {
-    "test"
-  }
-}
 
 }
