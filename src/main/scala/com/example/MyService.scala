@@ -16,7 +16,7 @@ class MyServiceActor extends Actor with MyService {
   // this actor only runs our route, but you could add
   // other things here, like request stream processing
   // or timeout handling
-  def receive = runRoute(myRoute2)
+  def receive = runRoute(myRoute3)
 }
 
 
@@ -66,6 +66,22 @@ trait MyService extends HttpService with Common {
       }
     }
 
+  val myRoute3 =
+    parameters('num1 ? 0, 'num2 ? 0) { (num1, num2) =>
+      path("calculations" / Segment ) {
+        calType =>
+        get {
+          respondWithMediaType(`application/json`){
+            complete{
+              calType match {
+                case "add" => "{\"add\":\"" + add(num1, num2) + "\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+
 
 }
 
@@ -74,5 +90,11 @@ trait Common {
   lazy val div2: Int => Int = n => n/2
   lazy val add: (Int, Int) => Int = (n1, n2) => n1+n2
   def addDiv = div2 compose square
-//  def addSquare(n1: Int) = square add(n1)
+
+  //JSON形式で関数を返す
+  def listConvertToJson[A](ls: Seq[A]): String = {
+    "test"
+  }
+}
+
 }

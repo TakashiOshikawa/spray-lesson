@@ -7,9 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="883d8e39-922b-4303-9497-df0df695a9aa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/example/Boot.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/example/Boot.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$$anonfun$3$$anonfun$apply$4$$anonfun$apply$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/Common$$anonfun$add$1.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/Common$$anonfun$add$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/Common$$anonfun$div2$1.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/Common$$anonfun$div2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/Common$$anonfun$square$1.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/Common$$anonfun$square$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/Common$class.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/Common$class.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$$anonfun$2$$anonfun$apply$1$$anonfun$apply$2.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$$anonfun$2$$anonfun$apply$1$$anonfun$apply$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$$anonfun$2$$anonfun$apply$1$$anonfun$apply$3.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$$anonfun$2$$anonfun$apply$1$$anonfun$apply$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$$anonfun$2$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$$anonfun$2$$anonfun$apply$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$$anonfun$2.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$$anonfun$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$$anonfun$3$$anonfun$apply$4.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$$anonfun$3$$anonfun$apply$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$$anonfun$3.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$$anonfun$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$class.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyService$class.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyServiceActor.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/com/example/MyServiceActor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/example/MyService.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/example/MyService.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.conf" afterPath="$PROJECT_DIR$/src/main/resources/application.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.10" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.10" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/reStart/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/reStart/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/reStop/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/reStop/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spray.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,9 +83,11 @@
       <file leaf-file-name="MyService.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/example/MyService.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12686567">
-              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-              <folding />
+            <state vertical-scroll-proportion="0.48507464">
+              <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+              <folding>
+                <element signature="e#21#44#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -623,9 +643,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/example/MyService.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12686567">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-          <folding />
+        <state vertical-scroll-proportion="0.48507464">
+          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+          <folding>
+            <element signature="e#21#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
