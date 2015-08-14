@@ -30,59 +30,45 @@ trait MyService extends HttpService with Common {
   val myRoute =
     path("") {
       get {
-        respondWithMediaType(`text/html`) { // XML is marshalled to `text/xml` by default, so we simply override here
+        respondWithMediaType(`text/html`) {
           complete {
             <html>
               <body>
                 <h1>Say hello to <i>spray-routing</i> on <i>spray-can</i>!</h1>
               </body>
             </html>
-          }
-        }
-      }
-    }
+    }}}}
+
 
   val myRoute2 =
     parameters('color, 'backgroundColor) { (color, backgroundColor) =>
+      path("hell" / IntNumber / IntNumber) {
+        (num, num2) =>
+          get {
+            respondWithMediaType(`application/json`) {
+              complete {
+                "{\"val1\":\"" + addDiv(num) + "\", \"color\":\"" + color + "\" }"
+          }}} ~
+          post {
+            respondWithMediaType(`application/json`) {
+              complete {
+                jsonVal2
+          }}}
+    }}
 
-    path("hell" / IntNumber / IntNumber) {
-      (num, num2) =>
-
-        get {
-          respondWithMediaType(`application/json`) {
-            // XML is marshalled to `text/xml` by default, so we simply override here
-            complete {
-              "{\"val1\":\"" + addDiv(num) + "\", \"color\":\"" + color + "\" }"
-              //            jsonVal
-            }
-          }
-        } ~
-        post {
-          respondWithMediaType(`application/json`) {
-            complete {
-              jsonVal2
-            }
-          }
-        }
-      }
-    }
 
   val myRoute3 =
-    parameters('num1 ? 0, 'num2 ? 0) { (num1, num2) =>
+    parameters('num1 ? 0, 'num2 ? 0) { (n1, n2) =>
       path("calculations" / Segment ) {
         calType =>
         get {
-          respondWithMediaType(`application/json`){
-            complete{
+          respondWithMediaType(`application/json`) {
+            complete {
               calType match {
-                case "add"  => "{\"add\":\"" + add(num1, num2) + "\"}"
-                case "json" => listConvertToJson(Map("aaa"->111, "bbb"->222))
-              }
-            }
-          }
-        }
-      }
-    }
+                case "add"  => "{\"add\":\"" + add(n1, n2) + "\"}"
+                case "json" => listConvertToJson(
+                               Map("add" -> add(n1,n2), "sub" -> sub(n1,n2), "multi" -> multi(n1,n2), "div" -> div(n1,n2)) )
+    }}}}}}
 
 
 }

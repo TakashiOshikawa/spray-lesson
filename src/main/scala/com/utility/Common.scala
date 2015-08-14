@@ -8,13 +8,16 @@ trait Common {
   lazy val square: Int => Int = n => n*n
   lazy val div2: Int => Int = n => n/2
   lazy val add: (Int, Int) => Int = (n1, n2) => n1+n2
+  lazy val sub: (Int, Int) => Int = (n1, n2) => n1-n2
+  lazy val multi: (Int, Int) => Int = (n1, n2) => n1*n2
+  lazy val div: (Int, Int) => Int = (n1, n2) => n1/n2
   def addDiv = div2 compose square
 
   //JSON形式で関数を返す
   //Mapを１つ取得してkeyとvalueをjson形式にしてStringで返す
   def listConvertToJson[A,B](mp: Map[A,B]): String = {
-    val js = "{" + mp.foldLeft("")((k, v) => k + jsonFormat(v._1, v._2)) + "}"
-    js.replaceAll( ",}", "}" )
+    val jsonVal = "{" + mp.foldLeft("")((k, v) => k + jsonFormat(v._1, v._2)) + "}"
+    jsonVal.replaceAll( ",}", "}" )
   }
 
   //入力された2つの値をJSON形式にして返す
